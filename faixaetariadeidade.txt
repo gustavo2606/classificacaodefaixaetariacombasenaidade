@@ -1,0 +1,36 @@
+int idade;
+bool entradavalida = false;
+
+do
+{
+    Console.Write("digite a idade da pessoa ");
+    string entrada = Console.ReadLine();
+
+           
+
+    if (int.TryParse(entrada, out idade) && idade >= 0)
+    {
+
+        entradavalida = true;
+
+    }
+    else
+    {
+        Console.WriteLine("por favor , insira uma idade valida ( um numero inteiro maior ou igual a zero)");
+    }
+
+
+
+}
+while (!entradavalida);
+
+if (idade <= 12)
+    Console.WriteLine("essa pessoa é uma criança");
+else if (idade <= 17)
+    Console.WriteLine("essa pessoa é um adolecente");
+else if (idade <= 59)
+    Console.WriteLine("essa pessoa é  adulta");
+else
+    Console.WriteLine("essa pessoa é um idoso ");
+
+Console.ReadLine();
